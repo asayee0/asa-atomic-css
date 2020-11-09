@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0% 5px);
+  clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0% 7px);
   background-color: #2E2E2E;
   border: none;
   padding: 0;
@@ -30,7 +30,7 @@ body {
 }
 
 button {
-  clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
+  clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 7px 100%, 0 calc(100% - 7px));
   width: 150px;
   height: 30px;
   background-color: #565656;
@@ -49,7 +49,7 @@ button:hover {
 }
 
 li {
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0% 100%);
   width: 150px;
   height: 30px;
   background-color: #565656;

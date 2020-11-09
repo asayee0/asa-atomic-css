@@ -77,10 +77,10 @@ body{
     color: $textColor;
 }
 .container{
-    @include container(150px, 30px, 5px);
+    @include container(150px, 30px, 7px);
 }
 button{
-	@include cutRectangle-tr-bl(5px);
+	@include cutRectangle-tr-bl(7px);
     @include atomDimensions;
     @include bgColor($tertiaryColor);
     color: $textColor;
@@ -95,7 +95,7 @@ button:hover{
     width: auto;
 }
 li{
-    @include cutRectangle-br(5px);
+    @include cutRectangle-br(7px);
     @include atomDimensions;
     @include bgColor($tertiaryColor);
     margin-bottom: 3px;
