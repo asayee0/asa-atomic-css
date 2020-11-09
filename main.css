@@ -1,0 +1,59 @@
+/* Add fonts to HTML 
+<link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Share+Tech+Mono&display=swap" rel="stylesheet"> */
+header {
+  background-color: #2E2E2E;
+  padding: 1px 10px;
+}
+
+h1, p {
+  font-family: "Oxygen Mono", monospace;
+}
+
+h2, h3, h4, h5, h6, button, li {
+  font-family: "Share Tech Mono", monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #818181;
+  color: #fff;
+}
+
+.container {
+  clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0% 5px);
+  background-color: #2E2E2E;
+  border: none;
+  padding: 0;
+  width: 150px;
+  height: 30px;
+}
+
+button {
+  clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
+  width: 150px;
+  height: 30px;
+  background-color: #565656;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background-color: #747474;
+  cursor: pointer;
+}
+
+.list {
+  padding: 0;
+  width: auto;
+}
+
+li {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0% 100%);
+  width: 150px;
+  height: 30px;
+  background-color: #565656;
+  margin-bottom: 3px;
+}
+
+/*# sourceMappingURL=main.css.map */

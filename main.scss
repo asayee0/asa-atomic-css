@@ -1,0 +1,102 @@
+/* Add fonts to HTML 
+<link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Share+Tech+Mono&display=swap" rel="stylesheet"> */
+$textColor: #fff;
+$borderColor: #fff;
+$primaryColor: #2E2E2E;
+$secondaryColor: #747474;
+$tertiaryColor: #565656;
+$backgroundColor: #818181;
+$primaryFont: 'Oxygen Mono', monospace;
+$secondaryFont: 'Share Tech Mono', monospace;
+
+@mixin boilerplate {
+    margin: 0;
+    padding: 0;
+}
+@mixin bgColor($color){
+    background-color: $color;
+}
+@mixin cutRectangle-tl-br($cutLength) {
+    // tl-br = top-left, bottom-right
+    clip-path: polygon(
+		$cutLength 0, 
+		100% 0,
+		100% calc(100% - #{$cutLength}), 
+		calc(100% - #{$cutLength}) 100%, 
+		0 100%, 
+		0% $cutLength
+	);
+}
+@mixin cutRectangle-tr-bl($cutLength) {
+    clip-path: polygon(
+		0 0,
+		calc(100% - #{$cutLength}) 0, 
+		100% $cutLength, 
+		100% 100%, 
+		$cutLength 100%,
+		0 calc(100% - #{$cutLength})
+    );
+}
+@mixin cutRectangle-br($cutLength) {
+    // tl-br = top-left, bottom-right
+    clip-path: polygon(
+		0 0, 
+		100% 0,
+		100% calc(100% - #{$cutLength}), 
+		calc(100% - #{$cutLength}) 100%, 
+		0 100%, 
+		0% 100%
+	);
+}
+@mixin container($width, $height, $cutLength){
+	@include cutRectangle-tl-br($cutLength);
+    @include bgColor($primaryColor);
+	border: none;
+    padding: 0;
+    width: $width;
+    height: $height;
+}
+@mixin atomDimensions{
+    width: 150px;
+    height: 30px;
+}
+
+header{
+    @include bgColor($primaryColor);
+    padding: 1px 10px;
+}
+h1, p{
+    font-family: $primaryFont;
+}
+h2, h3, h4, h5, h6, button, li{
+    font-family: $secondaryFont;
+}
+body{
+    @include boilerplate;
+    @include bgColor($backgroundColor);
+    color: $textColor;
+}
+.container{
+    @include container(150px, 30px, 5px);
+}
+button{
+	@include cutRectangle-tr-bl(5px);
+    @include atomDimensions;
+    @include bgColor($tertiaryColor);
+    color: $textColor;
+    border: none;
+}
+button:hover{
+    @include bgColor($secondaryColor);
+    cursor: pointer;
+}
+.list{
+    padding: 0;
+    width: auto;
+}
+li{
+    @include cutRectangle-br(5px);
+    @include atomDimensions;
+    @include bgColor($tertiaryColor);
+    margin-bottom: 3px;
+}
